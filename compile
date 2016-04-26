@@ -1,0 +1,7 @@
+javac -d bin/ src/*.java;
+
+if [ $? -eq 0 ]; then
+	echo "Compiled successfully"
+else
+	echo "Error occured while compiling"
+fi

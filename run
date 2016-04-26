@@ -1,0 +1,6 @@
+cd bin;
+rmic Player;
+rmic PlayerRegistry;
+uxterm -T "UXTerm" -uc -fa inconsolata:size=10 -geometry 11x5 -e "echo rmiregistry; rmiregistry"&
+uxterm -T "UXTerm" -uc -fa inconsolata:size=10 -geometry 30x5 -e "sleep 1; java -Djava.security.policy=mysecurity.policy MainServer;"&
+uxterm -T "UXTerm" -uc -fa droid:size=15 -geometry 56x24 -e "sleep 2; java -Djava.security.policy=mysecurity.policy MainClient localhost;"&
